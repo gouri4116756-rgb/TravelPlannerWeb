@@ -38,3 +38,5 @@ The regular itinerary works locally and needs no API credentials. To enable the 
 4. Configure Supabase authentication, CORS and database policies for your deployment before using it with real users.
 
 `supabase.js` is an optional REST helper. The local guide does not require Supabase.
+git config --global user.name "gouri4116756-rgb"
+git config --global user.email "gouri4116756@gmail.com"
