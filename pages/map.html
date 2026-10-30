@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Explore temples, heritage architecture, viewpoints and local spots on a map.">
+    <title>Explore places — Yatra</title><link rel="stylesheet" href="../style.css">
+    <script defer src="../js/data.js"></script><script defer src="../js/app.js"></script><script defer src="../js/maps.js"></script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+    <main>
+      <section class="page-intro"><p class="eyebrow">A map for the meandering kind</p><h1 class="page-title">Find your next stop.</h1><p class="page-lede">Browse temples, historic architecture, viewpoints and food streets. Choose a result to see the map, then open Google Maps for current directions.</p></section>
+      <section aria-label="Explore the map">
+        <div class="toolbar">
+          <div class="field"><label for="map-state">State</label><select id="map-state"><option>Karnataka</option><option>Kerala</option><option>Goa</option><option>Tamil Nadu</option><option>Maharashtra</option></select></div>
+          <div class="field"><label for="map-category">Category</label><select id="map-category"><option value="">All categories</option><option>Architecture</option><option>Temple</option><option>Viewpoint</option><option>Street food</option></select></div>
+          <div class="field"><label for="map-search">Search</label><input id="map-search" type="search" placeholder="Try Mysuru or temple"></div>
+        </div>
+        <div class="map-layout">
+          <div class="map-results" id="map-results" aria-live="polite"></div>
+          <div class="map-frame-wrap"><iframe class="map-frame" id="destination-map" title="Map of selected travel places" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><div class="map-fallback">Choose a place from the list to show its map.</div></div>
+        </div>
+        <p class="notice">The map uses Google Maps search embeds, so no browser API key is needed. A configured browser Maps key is public; if you use one, restrict it to your website’s allowed referrers and only the APIs you need.</p>
+      </section>
+    </main><footer id="site-footer"></footer>
+  </body>
+</html>

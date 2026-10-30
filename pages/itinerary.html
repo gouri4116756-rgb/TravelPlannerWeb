@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Build a simple trip itinerary from your saved Indian travel stops.">
+    <title>Plan a trip — Yatra</title><link rel="stylesheet" href="../style.css">
+    <script defer src="../js/config.js"></script><script defer src="../js/data.js"></script><script defer src="../js/app.js"></script><script defer src="../js/supabase.js"></script><script defer src="../js/ai.js"></script><script defer src="../js/itinerary.js"></script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+    <main>
+      <section class="page-intro"><p class="eyebrow">Good plans leave room to wander</p><h1 class="page-title">Put your stops together.</h1><p class="page-lede">Save places from Explore, choose a trip length and make a simple itinerary. It works in your browser without an account.</p></section>
+      <section class="form-panel">
+        <div class="form-grid">
+          <div class="field"><label for="trip-state">State</label><select id="trip-state"><option>Karnataka</option><option>Kerala</option><option>Goa</option><option>Tamil Nadu</option><option>Maharashtra</option></select></div>
+          <div class="field"><label for="trip-days">Trip length</label><select id="trip-days"><option value="1">1 day</option><option value="2">2 days</option><option value="3" selected>3 days</option><option value="4">4 days</option><option value="5">5 days</option><option value="7">7 days</option></select></div>
+          <div class="field field-full"><label for="trip-interests">What do you enjoy?</label><input id="trip-interests" placeholder="Heritage, local food, quiet views"></div>
+        </div>
+        <div class="card-actions"><button class="button button-dark" id="build-itinerary" type="button">Build my itinerary</button><button class="button" id="clear-itinerary" type="button">Clear saved stops</button><button class="button" id="ai-itinerary" type="button">Ask AI (optional)</button></div>
+        <p class="notice" id="itinerary-notice" aria-live="polite">AI planning requires a separately configured Supabase Edge Function. No API key is needed for the local itinerary.</p>
+      </section>
+      <section class="saved-list" aria-label="Saved places"><div class="section-heading"><div><p class="eyebrow">Your saved detours</p><h2>Stops you picked.</h2></div><a class="text-link" href="../index.html#explore">Add more places ↗</a></div><div id="saved-places"></div></section>
+      <section class="itinerary-output" id="itinerary-output" aria-live="polite"></section>
+    </main><footer id="site-footer"></footer>
+  </body>
+</html>

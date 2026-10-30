@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Explore a locally inspired Indian street food guide, starting in Karnataka.">
+    <title>Street food — Yatra</title><link rel="stylesheet" href="../style.css">
+    <script defer src="../js/data.js"></script><script defer src="../js/app.js"></script><script defer src="../js/food.js"></script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+    <main>
+      <section class="page-intro"><p class="eyebrow">Take the scenic route to your snack</p><h1 class="page-title">The street-food detour.</h1><p class="page-lede">A starting list of local bites and market areas. Suggestions are for exploration, not endorsements of specific vendors—check opening hours and ask locally.</p></section>
+      <section aria-label="Street food suggestions">
+        <div class="toolbar">
+          <div class="field"><label for="food-state">State</label><select id="food-state"><option>Karnataka</option><option>Kerala</option><option>Goa</option><option>Tamil Nadu</option><option>Maharashtra</option></select></div>
+          <div class="field"><label for="food-search">Search by town or food</label><input id="food-search" type="search" placeholder="Try Udupi or snacks"></div>
+        </div>
+        <p class="results-note" id="food-count" aria-live="polite"></p><div class="place-grid" id="food-results"></div>
+      </section>
+    </main><footer id="site-footer"></footer>
+  </body>
+</html>
